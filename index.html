@@ -1,71 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sancoale Parish | Mass Times</title>
-<style>
-:root{--burgundy:#6b1f2b;--gold:#c7a45a;--cream:#faf7f0;--ink:#292525}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--cream);line-height:1.6}
-header{background:var(--burgundy);color:white;padding:18px 7%;position:sticky;top:0;z-index:10}
-nav{display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:1.35rem;font-weight:bold}
-nav a{color:white;text-decoration:none;margin-left:20px;font-family:Arial,sans-serif;font-size:.9rem}
-.hero{min-height:430px;display:flex;align-items:center;justify-content:center;text-align:center;padding:65px 20px;background:linear-gradient(rgba(50,20,25,.72),rgba(50,20,25,.72)),url("church-placeholder.jpg") center/cover;color:white}
-.cross{font-size:3rem;color:var(--gold)}.hero h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.05;margin:15px 0}.hero p{font-size:1.15rem}
-.btn{display:inline-block;margin-top:26px;padding:12px 25px;background:var(--gold);color:white;text-decoration:none;border-radius:4px;font-family:Arial,sans-serif;font-weight:bold}
-section{padding:65px 7%;max-width:1200px;margin:auto}.section-title{text-align:center;margin-bottom:35px}
-.section-title h2{color:var(--burgundy);font-size:2.3rem}.section-title p{color:#6e6764;font-family:Arial,sans-serif}
-.church-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:25px}
-.church-card{background:white;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.07);overflow:hidden}
-.church-card h3{background:var(--burgundy);color:white;padding:20px;text-align:center;font-size:1.55rem}
-.schedule{padding:24px}.day{padding:15px 0;border-bottom:1px solid #eee}.day:last-child{border-bottom:0}
-.day strong{display:block;color:var(--burgundy);font-size:1.05rem;margin-bottom:5px}.time{font-family:Arial,sans-serif}
-.special{background:#f4ead7;padding:15px;margin-top:15px;border-left:4px solid var(--gold);border-radius:4px}
-.note{text-align:center;color:#6e6764;font-family:Arial,sans-serif;margin-top:28px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}.card{background:white;padding:28px;border-radius:10px;border-top:4px solid var(--gold);box-shadow:0 5px 20px rgba(0,0,0,.06)}
-.card h3{color:var(--burgundy);margin-bottom:10px}.notice{background:#f0e7d2;border-left:5px solid var(--gold);padding:22px;border-radius:6px;font-family:Arial,sans-serif}
-.contact{background:var(--burgundy);color:white;max-width:none;text-align:center}.contact h2{color:white}
-footer{background:#42131b;color:#eee;text-align:center;padding:25px;font-family:Arial,sans-serif;font-size:.85rem}
-@media(max-width:650px){header{padding:15px 5%}nav{flex-direction:column;align-items:flex-start}nav a{margin:0 12px 0 0}.hero{min-height:390px}section{padding:50px 5%}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sancoale Parish - Mass times, parish services and announcements.">
+  <title>Sancoale Parish</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><nav><div class="logo">✝ Sancoale Parish</div><div>
-<a href="#mass-times">Mass Times</a><a href="#services">Services</a><a href="#announcements">Announcements</a><a href="#contact">Contact</a>
-</div></nav></header>
+<header class="site-header">
+  <nav class="nav container">
+    <a class="logo" href="index.html">✝ Sancoale Parish</a>
+    <div class="nav-links">
+      <a href="#mass-times">Mass Times</a>
+      <a href="#services">Services</a>
+      <a href="#announcements">Announcements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
 <main>
-<section class="hero"><div><div class="cross">✝</div><h1>Welcome to Sancoale Parish</h1><p>Join us in prayer, worship and fellowship.</p><a class="btn" href="#mass-times">View Mass Times</a></div></section>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="cross">✝</div>
+      <p class="eyebrow">Welcome to our parish</p>
+      <h1>Sancoale Parish</h1>
+      <p>Join us in prayer, worship and fellowship.</p>
+      <a class="button" href="#mass-times">View Mass Times</a>
+    </div>
+  </section>
 
-<section id="mass-times"><div class="section-title"><h2>Mass Times</h2><p>Mass and worship times for our three churches.</p></div>
-<div class="church-grid">
+  <section id="mass-times" class="section container">
+    <div class="section-heading">
+      <p class="eyebrow">Worship</p>
+      <h2>Mass Times</h2>
+      <p>Mass and worship times for our three churches.</p>
+    </div>
 
-<article class="church-card"><h3>⛪ Sancoale Church</h3><div class="schedule">
-<div class="day"><strong>Weekdays</strong><div class="time">Mass — 7:00 AM</div></div>
-<div class="day"><strong>Sunday</strong><div class="time">1st Mass — 6:15 AM</div><div class="time">2nd Mass — 8:45 AM</div></div>
-</div></article>
+    <div class="church-grid">
+      <article class="church-card">
+        <div class="church-card-title"><span>⛪</span><h3>Sancoale Church</h3></div>
+        <div class="schedule">
+          <div class="day"><h4>Weekdays</h4><p>Mass — <strong>7:00 AM</strong></p></div>
+          <div class="day"><h4>Sunday</h4><p>1st Mass — <strong>6:15 AM</strong></p><p>2nd Mass — <strong>8:45 AM</strong></p></div>
+        </div>
+      </article>
 
-<article class="church-card"><h3>🕊️ Sanctuary</h3><div class="schedule">
-<div class="day"><strong>Weekdays</strong><div class="time">Mass — 7:00 AM</div></div>
-<div class="day"><strong>Friday</strong><div class="time">1st Mass — 7:00 AM</div><div class="time">2nd Mass — 9:00 AM</div><div class="time">Worship — until 11:30 AM</div></div>
-<div class="day"><strong>Saturday</strong><div class="time">English Mass — 6:15 PM</div></div>
-<div class="day"><strong>Sunday</strong><div class="time">1st Mass — 6:00 AM</div><div class="time">2nd Mass — 9:00 AM</div></div>
-<div class="special"><strong>16th of every month</strong><br>No morning Mass.<br>Evening Mass — <strong>4:30 PM</strong></div>
-</div></article>
+      <article class="church-card">
+        <div class="church-card-title"><span>🕊️</span><h3>Sanctuary</h3></div>
+        <div class="schedule">
+          <div class="day"><h4>Weekdays</h4><p>Mass — <strong>7:00 AM</strong></p></div>
+          <div class="day"><h4>Friday</h4><p>1st Mass — <strong>7:00 AM</strong></p><p>2nd Mass — <strong>9:00 AM</strong></p><p>Worship — until <strong>11:30 AM</strong></p></div>
+          <div class="day"><h4>Saturday</h4><p>English Mass — <strong>6:15 PM</strong></p></div>
+          <div class="day"><h4>Sunday</h4><p>1st Mass — <strong>6:00 AM</strong></p><p>2nd Mass — <strong>9:00 AM</strong></p></div>
+          <div class="special"><h4>16th of every month</h4><p>No morning Mass.</p><p>Evening Mass — <strong>4:30 PM</strong></p></div>
+        </div>
+      </article>
 
-<article class="church-card"><h3>⛪ Old Church</h3><div class="schedule"><div class="day"><strong>Sunday</strong><div class="time">Mass — 7:30 AM</div></div></div></article>
-</div>
-<p class="note">Please check parish announcements for temporary changes to Mass times.</p>
-</section>
+      <article class="church-card">
+        <div class="church-card-title"><span>⛪</span><h3>Old Church</h3></div>
+        <div class="schedule">
+          <div class="day"><h4>Sunday</h4><p>Mass — <strong>7:30 AM</strong></p></div>
+        </div>
+      </article>
+    </div>
+    <p class="small-note">Please check parish announcements for temporary changes to Mass times.</p>
+  </section>
 
-<section id="services"><div class="section-title"><h2>Parish Services</h2><p>More parish information can be added here.</p></div>
-<div class="cards"><div class="card"><h3>🙏 Confession</h3><p>Details to be added.</p></div><div class="card"><h3>🌹 Rosary</h3><p>Details to be added.</p></div><div class="card"><h3>🕯️ Adoration & Worship</h3><p>Details to be added.</p></div></div></section>
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <div class="section-heading"><p class="eyebrow">Parish Life</p><h2>Parish Services</h2><p>More information can be added as details become available.</p></div>
+      <div class="info-grid">
+        <article class="info-card"><div class="icon">🙏</div><h3>Confession</h3><p>Details to be added.</p></article>
+        <article class="info-card"><div class="icon">🌹</div><h3>Rosary</h3><p>Details to be added.</p></article>
+        <article class="info-card"><div class="icon">🕯️</div><h3>Adoration & Worship</h3><p>Details to be added.</p></article>
+      </div>
+    </div>
+  </section>
 
-<section id="announcements"><div class="section-title"><h2>Parish Announcements</h2><p>Important parish notices and upcoming events.</p></div>
-<div class="notice"><strong>Announcements</strong><br>Updates, feast days, special services and changes to Mass timings can be added here.</div></section>
+  <section id="announcements" class="section container">
+    <div class="section-heading"><p class="eyebrow">Stay Updated</p><h2>Parish Announcements</h2><p>Important notices, feast days and upcoming events.</p></div>
+    <div class="announcement"><strong>Announcements</strong><p>Updates, special services and changes to Mass timings can be added here.</p></div>
+  </section>
 
-<section id="contact" class="contact"><div class="section-title"><h2>Contact the Parish</h2><p style="color:#eee">Parish contact details can be added when ready.</p></div>
-<p>📍 Address — To be added</p><p>📞 Telephone — To be added</p><p>✉️ Email — To be added</p></section>
+  <section id="contact" class="contact-section">
+    <div class="container contact-content">
+      <p class="eyebrow light">Get in touch</p>
+      <h2>Contact the Parish</h2>
+      <p>Add the parish address, telephone number and email here when ready.</p>
+      <div class="contact-details">
+        <span>📍 Address — To be added</span>
+        <span>📞 Telephone — To be added</span>
+        <span>✉️ Email — To be added</span>
+      </div>
+    </div>
+  </section>
 </main>
-<footer>© 2026 Sancoale Parish · All rights reserved</footer>
-</body></html>
+
+<footer><p>© 2026 Sancoale Parish · All rights reserved</p></footer>
+</body>
+</html>
