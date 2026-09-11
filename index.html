@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parish | Mass Times</title>
+<style>
+:root {
+  --burgundy:#6b1f2b;
+  --gold:#c7a45a;
+  --cream:#faf7f0;
+  --ink:#292525;
+  --muted:#6e6764;
+  --white:#fff;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+}
+header {
+  background:var(--burgundy);
+  color:white;
+  padding:18px 7%;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+nav { display:flex; align-items:center; justify-content:space-between; gap:25px; }
+.logo { font-size:1.35rem; font-weight:bold; letter-spacing:.5px; }
+nav a { color:white; text-decoration:none; margin-left:22px; font-family:Arial,sans-serif; font-size:.9rem; }
+.hero {
+  min-height:470px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px;
+  background:
+    linear-gradient(rgba(50,20,25,.68),rgba(50,20,25,.68)),
+    url("church-placeholder.jpg") center/cover;
+  color:white;
+}
+.hero .cross { font-size:3rem; color:var(--gold); margin-bottom:15px; }
+.hero h1 { font-size:clamp(2.4rem,6vw,4.8rem); line-height:1.05; margin-bottom:18px; }
+.hero p { font-size:1.15rem; max-width:650px; margin:auto; }
+.btn {
+  display:inline-block; margin-top:28px; padding:12px 25px;
+  background:var(--gold); color:#fff; text-decoration:none;
+  border-radius:4px; font-family:Arial,sans-serif; font-weight:bold;
+}
+section { padding:70px 7%; max-width:1200px; margin:auto; }
+.section-title { text-align:center; margin-bottom:35px; }
+.section-title h2 { color:var(--burgundy); font-size:2.3rem; }
+.section-title p { color:var(--muted); font-family:Arial,sans-serif; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px; }
+.card {
+  background:white; padding:28px; border-radius:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+  border-top:4px solid var(--gold);
+}
+.card h3 { color:var(--burgundy); margin-bottom:12px; }
+.mass-table { width:100%; border-collapse:collapse; background:white; border-radius:10px; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,.06); }
+.mass-table th, .mass-table td { padding:17px 20px; text-align:left; border-bottom:1px solid #eee; }
+.mass-table th { background:var(--burgundy); color:white; }
+.mass-table tr:last-child td { border-bottom:0; }
+.notice {
+  background:#f0e7d2; border-left:5px solid var(--gold);
+  padding:22px; border-radius:6px; font-family:Arial,sans-serif;
+}
+.contact {
+  background:var(--burgundy); color:white; max-width:none;
+  text-align:center;
+}
+.contact h2 { color:white; }
+footer {
+  background:#42131b; color:#eee; text-align:center;
+  padding:25px 15px; font-family:Arial,sans-serif; font-size:.85rem;
+}
+@media(max-width:650px) {
+  header { padding:15px 5%; }
+  nav { flex-direction:column; align-items:flex-start; }
+  nav a { margin:0 14px 0 0; }
+  .hero { min-height:400px; }
+  section { padding:50px 5%; }
+  .mass-table th,.mass-table td { padding:13px 12px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">✝ Parish Name</div>
+    <div>
+      <a href="#mass-times">Mass Times</a>
+      <a href="#services">Services</a>
+      <a href="#announcements">Announcements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <div class="cross">✝</div>
+      <h1>Welcome to Our Parish</h1>
+      <p>A welcoming Catholic community. Join us in prayer, worship and fellowship.</p>
+      <a class="btn" href="#mass-times">View Mass Times</a>
+    </div>
+  </section>
+
+  <section id="mass-times">
+    <div class="section-title">
+      <h2>Mass Times</h2>
+      <p>Replace these placeholders with your parish's current schedule.</p>
+    </div>
+    <table class="mass-table">
+      <thead><tr><th>Day</th><th>Mass / Service</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>Monday</td><td>Holy Mass</td><td>00:00 AM</td></tr>
+        <tr><td>Tuesday</td><td>Holy Mass</td><td>00:00 AM</td></tr>
+        <tr><td>Wednesday</td><td>Holy Mass</td><td>00:00 AM</td></tr>
+        <tr><td>Thursday</td><td>Holy Mass</td><td>00:00 AM</td></tr>
+        <tr><td>Friday</td><td>Holy Mass</td><td>00:00 AM</td></tr>
+        <tr><td>Saturday</td><td>Holy Mass</td><td>00:00 PM</td></tr>
+        <tr><td>Sunday</td><td>Holy Mass</td><td>00:00 AM / 00:00 AM</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="services">
+    <div class="section-title">
+      <h2>Parish Services</h2>
+      <p>Additional times and services can be added here.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><h3>🙏 Confession</h3><p>Add your Confession times here.</p></div>
+      <div class="card"><h3>🌹 Rosary</h3><p>Add your Rosary times here.</p></div>
+      <div class="card"><h3>🕯️ Adoration</h3><p>Add Adoration details here.</p></div>
+    </div>
+  </section>
+
+  <section id="announcements">
+    <div class="section-title">
+      <h2>Parish Announcements</h2>
+      <p>Keep parishioners informed about upcoming changes and events.</p>
+    </div>
+    <div class="notice">
+      <strong>Announcement</strong><br>
+      Your latest parish announcement can be placed here. You can later add
+      feast days, Christmas and Easter schedules, parish events and Mass-time changes.
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="section-title">
+      <h2>Contact the Parish</h2>
+      <p style="color:#eee">Add your parish address, phone number and email when ready.</p>
+    </div>
+    <p>📍 Parish Address — To be added</p>
+    <p>📞 Telephone — To be added</p>
+    <p>✉️ Email — To be added</p>
+  </section>
+</main>
+
+<footer>
+  © 2026 Parish Name · All rights reserved
+</footer>
+
+</body>
+</html>
